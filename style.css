@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "MyCalibri";
+    src: url("fonts/CalibriRegular.woff2") format("woff2");
+    src: url("fonts/CalibriRegular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "MyBernadette";
+    src: url('fonts/bernadette.woff') format("woff");
+    src: url('fonts/bernadette.woff2') format("woff2");
+}
+
+body {
+    font-family: "MyCalibri", sans-serif;
+    background: black;
+    display: block;
+}
+
+.letterboxTop {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+    padding-top: 40px;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+.letterboxBottom {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+.nav a {
+    color: white;
+}
+
+#images {
+    z-index: -1;
+    top: 0;
+    position: absolute;
+}
+
+.bigImg {
+    width: 100%;
+}
+
+.my-5 {
+    color: white;
+}
+
+.hero {
+    font-family: "MyBernadette", "MyCalibri", serif;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+.heroSmall {
+    padding-top: 4rem;
+    font-size: 150%;
+}
+
+.secondDiv {
+    margin-top: 15rem;
+}
+
+.jumbotron {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.jumbotron h1 {
+    font-family: "MyBernadette", "MyCalibri", sans-serif;
+}
+
+.jumbotron img {
+    border-radius: 5px;
+}
+
+@media (min-width:750px) {
+    .jumbotronInnerDiv {
+        width: 80%;
+        padding-left: 5%;
+    }
+}
+
+.littleIcon {
+    margin-top: 0.5rem;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 0.5rem;
+}
+
+.littlerIcon {
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.embedCarousel {
+    padding: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    bottom: 0rem;
+    position: fixed;
+}
+
+iframe {
+    height: 800px;
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    .nav {
+        font-size: 200%;
+    }
+    
+    .nav-item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
