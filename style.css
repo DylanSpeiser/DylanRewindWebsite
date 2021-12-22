@@ -44,8 +44,16 @@ body {
     background-color: #000;
 }
 
+.nav {
+    margin-top: 5rem;
+}
+
 .nav a {
     color: white;
+}
+
+.nav a:hover {
+    color: darkgrey;
 }
 
 #images {
@@ -90,11 +98,14 @@ body {
     border-radius: 5px;
 }
 
-@media (min-width:750px) {
-    .jumbotronInnerDiv {
-        width: 80%;
-        padding-left: 5%;
-    }
+.bigImgSM {
+    display: none;
+}
+
+.halfDiv {
+    display: inline-block;
+    width: 49%;
+    height: 100%;
 }
 
 .littleIcon {
@@ -116,12 +127,6 @@ hr {
     margin-bottom: 0;
 }
 
-.embedCarousel {
-    padding: 0;
-    z-index: -1;
-    width: 100%;
-}
-
 footer {
     text-align: center;
     width: 100%;
@@ -131,8 +136,83 @@ footer {
 }
 
 iframe {
-    height: 800px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframeHolder {
+    position: relative;
+    overflow: hidden;
     width: 100%;
+    padding-top: 56.25%;
+}
+
+.pageImg {
+    height: 100%;
+    position: fixed;
+}
+
+.logoContainer img {
+    width: 100%;
+}
+
+.pageParagraph {
+    padding-top: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+@media (min-width:750px) {
+    .jumbotronInnerDiv {
+        width: 80%;
+        padding-left: 5%;
+    }
+}
+
+@media (max-width:850px) {
+    .letterboxBottom {
+        padding-bottom: 1rem;
+    }
+    
+    .letterboxTop {
+        padding-bottom: 1rem;
+    }
+    
+    .nav-link {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .bigImgSM {
+        display: block;
+    }
+    
+    .halfDiv {
+        width: 100%;
+        display: block;
+    }
+    
+    .pageParagraph {
+        padding-top: 1rem;
+        color: white;
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 850px) {
+    .nav {
+        font-size: 150%;
+    }
+    
+    .nav-item {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 }
 
 @media (min-width: 1000px) {
