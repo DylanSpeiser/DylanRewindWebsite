@@ -178,25 +178,25 @@ iframe {
     .letterboxBottom {
         padding-bottom: 1rem;
     }
-    
+
     .letterboxTop {
         padding-bottom: 1rem;
     }
-    
+
     .nav-link {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-    
+
     .bigImgSM {
         display: block;
     }
-    
+
     .halfDiv {
         width: 100%;
         display: block;
     }
-    
+
     .pageParagraph {
         padding-top: 1rem;
         color: white;
@@ -208,7 +208,7 @@ iframe {
     .nav {
         font-size: 150%;
     }
-    
+
     .nav-item {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -219,9 +219,35 @@ iframe {
     .nav {
         font-size: 200%;
     }
-    
+
     .nav-item {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+}
+
+.pageBody {
+    background-repeat: vertical;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+#dr2021 {
+    background-image: url("images/backgrounds/pages/2021.png");
+}
+
+#dr2020 {
+    background-image: url("images/backgrounds/pages/2020.png");
+}
+
+#dr2019 {
+    background-image: url("images/backgrounds/pages/2019.png");
+}
+
+#dr2018 {
+    background-image: url("images/backgrounds/pages/2018.png");
+}
+
+#drtrtm {
+    background-image: url("images/backgrounds/pages/drtrtm.png");
 }
