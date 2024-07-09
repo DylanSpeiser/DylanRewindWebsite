@@ -1,3 +1,4 @@
+/* Definitely okay font stuff */
 @font-face {
     font-family: "MyCalibri";
     src: url("fonts/CalibriRegular.woff2") format("woff2");
@@ -10,247 +11,345 @@
     src: url('fonts/bernadette.woff2') format("woff2");
 }
 
+.bernie {
+    font-family: 'MyBernadette', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Styles for super thin screens */
+@media only screen and (max-width: 350px) {
+    .bernie {
+        font-size: xx-large;
+    }
+
+    .flexContainerH {
+        padding: 0px;
+        justify-content: space-around;
+    }
+
+    #navbar {
+        width: auto!important;
+    }
+}
+
+/* Styles for vertical screens */
+@media only screen and (max-width: 767px) {
+    #navSep {
+        display: block;
+    }
+
+    #navbarRightExpanded {
+        font-size: smaller;
+        text-wrap: nowrap;
+    }
+
+    .flexContainerH {
+        padding: 0px 5vw;
+        justify-content: space-between!important;
+    }
+
+    #mobileTopImage {
+        opacity: 100%;
+    }
+
+    #indexBody {
+        background: black!important;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+    }
+}
+
+/* Styles for desktop screens */
+@media only screen and (min-width: 768px) {
+    #navSep {
+        display: none;
+    }
+
+    #mobileTopImage {
+        opacity: 0%;
+    }
+
+    .hero h1 {
+        font-size: 5em;
+    }
+
+    #entry-info {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 75%;
+    }
+
+    #description {
+        margin: 1vw;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+}
+
+/* Breakpoint for about me box */
+@media only screen and (max-width: 1080px) {
+    #aboutme {
+        width: 75%!important;
+        flex-direction: column-reverse!important;
+        margin-top: 10vh;
+    }
+
+    #aboutme-right {
+        width: 95%!important;
+        align-items: center!important;
+    }
+
+    #headshot {
+        width: 48vw;
+    }
+
+    #entry-info {
+        flex-direction: column;
+        max-width: 90%;
+        align-items: center;
+    }
+
+    iframe {
+        width: 80vw;
+        height: 44vw;
+    }
+}
+
+/* General Styles */
 body {
     font-family: "MyCalibri", sans-serif;
-    background: black;
-    display: block;
-}
 
-.letterboxTop {
-    width: 100%;
-    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
     text-align: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 9998;
-    padding-top: 40px;
-    box-sizing: border-box;
-    background-color: #000;
-}
 
-.letterboxBottom {
-    width: 100%;
-    margin: 0px auto;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9998;
-    padding-bottom: 40px;
-    box-sizing: border-box;
-    background-color: #000;
-}
+    padding: 10vh 0px;
+    margin: 0px;
+    min-height: 80vh;
 
-.nav {
-    margin-top: 5rem;
-}
-
-.nav a {
     color: white;
+    background-color: #111111;
 }
 
-.nav a:hover {
-    color: darkgrey;
+body > * {
+    margin: 1vh 0vw;
 }
 
-#images {
-    z-index: -1;
-    top: 0;
-    position: absolute;
-}
-
-.bigImg {
-    width: 100%;
-}
-
-.my-5 {
-    color: white;
-}
-
-.hero {
-    font-family: "MyBernadette", "MyCalibri", serif;
-    text-shadow: 2px 2px 8px #000000;
-}
-
-.heroSmall {
-    padding-top: 4rem;
-    font-size: 150%;
-}
-
-.secondDiv {
-    margin-top: 15rem;
-}
-
-.jumbotron {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-radius: 5px;
-}
-
-.jumbotron h1 {
-    font-family: "MyBernadette", "MyCalibri", sans-serif;
-}
-
-.jumbotron img {
-    border-radius: 5px;
-}
-
-.bigImgSM {
-    display: none;
-}
-
-.halfDiv {
-    display: inline-block;
-    width: 49%;
-    height: 100%;
-}
-
-.littleIcon {
-    margin-top: 0.5rem;
-    height: 1.6rem;
-    width: 1.6rem;
-    margin-right: 0.5rem;
-}
-
-.littlerIcon {
-    margin-top: 0.5rem;
-    height: 2rem;
-    width: 2rem;
-    margin-right: 0.5rem;
-}
-
-hr {
-    margin-top: 0;
-    margin-bottom: 0;
+body span {
+    max-width: 60vw;
 }
 
 footer {
-    text-align: center;
-    width: 100%;
-    z-index: 9999;
-    bottom: 0rem;
-    position: fixed;
+    position: absolute;
+    bottom: 0px;
+}
+
+.flexContainerV {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.flexContainerH {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
 }
 
 iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+    border-radius: 0.5vw;
 }
 
-.iframeHolder {
-    position: relative;
-    overflow: hidden;
+/* Letterbox Effect */
+#letterboxTop {
+    height: 10vh;
     width: 100%;
-    padding-top: 56.25%;
-}
-
-.pageImg {
-    height: 100%;
-    position: fixed;
-}
-
-.logoContainer img {
-    width: 100%;
-}
-
-.pageParagraph {
-    padding-top: 1rem;
-    color: white;
-    font-size: 2rem;
-}
-
-@media (min-width:750px) {
-    .jumbotronInnerDiv {
-        width: 80%;
-        padding-left: 5%;
-    }
-}
-
-@media (max-width:850px) {
-    .letterboxBottom {
-        padding-bottom: 1rem;
-    }
-
-    .letterboxTop {
-        padding-bottom: 1rem;
-    }
-
-    .nav-link {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-
-    .bigImgSM {
-        display: block;
-    }
-
-    .halfDiv {
-        width: 100%;
-        display: block;
-    }
-
-    .pageParagraph {
-        padding-top: 1rem;
-        color: white;
-        font-size: 1.4rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .nav {
-        font-size: 150%;
-    }
-
-    .nav-item {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-}
-
-@media (min-width: 1000px) {
-
-    .nav-item {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
-
-.pageBody {
-    background-attachment: fixed;
-    background-size: 250vh;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: rgb(0 0 0 / 44%);
-}
-
-#dr2021 {
-    background-image: url("images/backgrounds/pages/2021.png");
-}
-
-#dr2020 {
-    background-image: url("images/backgrounds/pages/2020.png");
-}
-
-#dr2019 {
-    background-image: url("images/backgrounds/pages/2019.png");
-}
-
-#dr2018 {
-    background-image: url("images/backgrounds/pages/2018.png");
-}
-
-#drtrtm {
-    background-image: url("images/backgrounds/pages/drtrtm.png");
-}
-
-#projphoenix {
     background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#letterboxBottom {
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    z-index: 98;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+#letterboxBottom span {
+    max-width: 100vw;
+}
+
+/* Navbar Stuff */
+#navbar {
+    font-size: x-large;
+    width: 100%;
+}
+
+#letterboxTop a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 1vw;
+}
+
+/* Hero */
+#indexBody > .hero {
+    margin: 12vw 0px;
+}
+
+.hero em {
+    font-family: 'MyCalibri';
+}
+
+/* About Me */
+#aboutme {
+    background-color: #d0d0d0;
+    width: 50%;
+    border-radius: 1vh;
+    color: #000;
+    text-shadow: none;
+    justify-content: space-between;
+}
+
+#aboutme-right {
+    width: 65%;
+    align-items: flex-start;
+    margin: 2vh;
+}
+
+#aboutme-smallIcons {
+    margin: 1vh 0px;
+}
+
+#aboutme-smallIcons a {
+    margin: 0.25vw;
+}
+
+#aboutme h3 {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+#aboutme p {
+    text-align: left;
+    margin: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.277);
+    padding-top: 1vh;
+}
+
+#headshot {
+    border-radius: 1vh;
+    margin: 2vh;
+}
+
+/* Speiser Productions Link */
+#speiserProductionsLink {
+    padding: 2em 3em;
+    border-radius: 1vh;
+    background-color: #d0d0d0;
+    text-shadow: none;
+    color: #000;
+}
+
+/* Background Image for Mobile Devices */
+#mobileTopImage {
+    width: 100vw;
+    z-index: -1;
+    position: fixed;
+    top: 10vh;
+}
+
+/* Body Styles for each page */
+#entry-info {
+    display: flex;
+}
+
+#description {
+    max-width: 700px;
+}
+
+#indexBody {
+    background-image: url('images/backgrounds/stage.png');
+    background-position: 50% 0vh;
+    background-size: auto 145vh;
+    background-repeat: no-repeat;
+
+    text-shadow: 1px 1px 4px black;
+}
+
+#dr2018Body {
+    background-image: url('images/backgrounds/pages/2018.png');
+    background-position: 50% 0vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    text-shadow: 1px 1px 4px black;
+}
+
+#dr2019Body {
+    background-image: url('images/backgrounds/pages/2019.png');
+    background-position: 50% 0vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    text-shadow: 1px 1px 4px black;
+}
+
+#dr2020Body {
+    background-image: url('images/backgrounds/pages/2020.png');
+    background-position: 50% 0vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    text-shadow: 1px 1px 4px black;
+}
+
+#dr2021Body {
+    background-image: url('images/backgrounds/pages/2021.png');
+    background-position: 50% 0vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    text-shadow: 1px 1px 4px black;
+}
+
+#drtrtmBody {
+    background-image: url('images/backgrounds/pages/drtrtm.png');
+    background-position: 50% 0vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    text-shadow: 1px 1px 4px black;
+}
+
+#projectphoenixBody {
+    background-color: #000;
 }
