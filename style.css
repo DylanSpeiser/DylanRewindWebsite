@@ -244,10 +244,22 @@ iframe {
 
 #aboutme-smallIcons {
     margin: 1vh 0px;
+    display: flex;
+    align-items: center;
 }
 
 #aboutme-smallIcons a {
     margin: 0.25vw;
+}
+
+.littleIcon {
+    height: 3vh;
+    width: 3vh;
+}
+
+.littlerIcon {
+    height: 3.3vh;
+    width: 3.3vh;
 }
 
 #aboutme h3 {
