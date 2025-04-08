@@ -365,5 +365,11 @@ iframe {
 }
 
 #projectphoenixBody {
-    background-color: #000;
+    background-image: url('images/backgrounds/Project\ Phoenix\ Poster\ Final.jpg');
+    background-position: 20% 0vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    text-shadow: 1px 1px 4px black;
 }
